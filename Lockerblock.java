@@ -86,7 +86,6 @@ public class Lockerblock
 			{
 				totalCurrentMAH += laptop.getCurrentMAH();
 				totalMaxMAH += laptop.getMaxMAH();
-				break;
 			}
 		}
 		double totalRemainingMAH = totalMaxMAH - totalCurrentMAH;
