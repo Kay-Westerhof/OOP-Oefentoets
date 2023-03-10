@@ -24,7 +24,7 @@ public class Lockerblock
 		ArrayList<Locker> availableLockers = new ArrayList<Locker>();
 		for(Locker locker : lockers)
 		{
-			if(locker.isAvailable() == true)
+			if(locker.isAvailable())
 			{
 				availableLockers.add(locker);
 			}
@@ -37,7 +37,7 @@ public class Lockerblock
 		Locker firstAvailableLocker = null;
 		for(Locker locker : lockers)
 		{
-			if(locker.isAvailable() == true)
+			if(locker.isAvailable())
 			{
 				return locker;
 			}
@@ -70,7 +70,7 @@ public class Lockerblock
 		{
 			if(locker.getLockerNumber() == lockerNumber)
 			{
-				if(locker.isAvailable() == true)
+				if(locker.isAvailable())
 				{
 					locker.setLaptop(laptop);
 				}
