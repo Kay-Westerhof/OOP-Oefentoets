@@ -8,8 +8,9 @@ public class Main
 		Laptop laptop1 = new Laptop ("123", 50.0, 100.0);
 		Laptop laptop2 = new Laptop ("234", 30, 100);
 		System.out.println(laptop1.getBatteryPercentage());
-		Locker locker1 = new Locker(1, laptop1);
+		Locker locker1 = new Locker(1);
 		Locker locker2 = new Locker(2);
+		locker1.setLaptop(laptop1);
 		System.out.println(locker1.isAvailable());
 		System.out.println(locker2.isAvailable());
 		Lockerblock lockerblock1 = new Lockerblock(new ArrayList<Locker>(Arrays.asList(locker1, locker2)));

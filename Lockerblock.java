@@ -9,6 +9,11 @@ public class Lockerblock
 		this.lockers = lockers;
 	}
 	
+	public ArrayList<Locker> getLockers()
+	{
+		return this.lockers;
+	}
+	
 	public void addLocker(Locker locker)
 	{
 		lockers.add(locker);
@@ -34,8 +39,7 @@ public class Lockerblock
 		{
 			if(locker.isAvailable() == true)
 			{
-				firstAvailableLocker = locker;
-				break;
+				return locker;
 			}
 		}
 		if(firstAvailableLocker == null)
@@ -54,8 +58,8 @@ public class Lockerblock
 						lockerHighestPercentage = locker;
 					}
 				}
-				firstAvailableLocker = lockerHighestPercentage;
 			}
+			firstAvailableLocker = lockerHighestPercentage;
 		}
 		return firstAvailableLocker;
 	}

@@ -11,11 +11,6 @@ public class Laptop
 		this.maxMAH = maxMAH;
 	}
 	
-	public double getBatteryPercentage()
-	{
-		return this.currentMAH / this.maxMAH * 100;
-	}
-	
 	public String getSerialNumber()
 	{
 		return this.serialNumber;
@@ -29,5 +24,10 @@ public class Laptop
 	public double getMaxMAH()
 	{
 		return this.maxMAH;
+	}
+	
+	public double getBatteryPercentage()
+	{
+		return this.currentMAH / this.maxMAH * 100;
 	}
 }

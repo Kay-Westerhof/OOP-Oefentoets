@@ -3,28 +3,10 @@ public class Locker
 	private int lockerNumber;
 	private Laptop laptop;
 	
-	public Locker(int lockerNumber, Laptop laptop)
-	{
-		this.lockerNumber = lockerNumber;
-		this.laptop = laptop;
-	}
-	
 	public Locker(int lockerNumber)
 	{
 		this.lockerNumber = lockerNumber;
 		this.laptop = null;
-	}
-	
-	public boolean isAvailable()
-	{
-		if(laptop == null)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
 	}
 	
 	public void setLaptop(Laptop laptop)
@@ -40,6 +22,23 @@ public class Locker
 	public int getLockerNumber()
 	{
 		return this.lockerNumber;
+	}
+	
+	public void setLockerNumber(int number)
+	{
+		this.lockerNumber = number;
+	}
+	
+	public boolean isAvailable()
+	{
+		if(laptop == null)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 }
